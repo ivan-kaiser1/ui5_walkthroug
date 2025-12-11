@@ -1,0 +1,11 @@
+<mvc:View
+    controllerName="ui5_walkthroug.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+
+    <Button 
+        text="Click Me"
+        type="Reject"
+        press="onClickMe"
+    ></Button>
+</mvc:View>
