@@ -1,17 +1,14 @@
 {
     "_version": "1.1.0",
-	
-	"start_url": "<startUrl>",
-	
     "sap.app": {
         "_version": "1.1.0",
-        "id": "<id>",
+        "id": "ui5_walkthroug",
         "type": "application",
-        "i18n": "<i18nPathRelativeToManifest>",
+        "i18n": "<i18n>/i18n.properties",
         "applicationVersion": {
-            "version": "<version>"
+            "version": "<1.0.0>"
         },
-        "title": "{{<title>}}",
+        "title": "{{appTitle}}",
         "tags": {
             "keywords": [
                 "{{<keyword1>}}", "{{<keyword2>}}"
@@ -87,7 +84,7 @@
                 "settings": {}
             }
         },
-        "rootView": "<rootView>",
+        "rootView": "ui5_walkthroug.view.App",
         "handleValidation": false,
         "config": {
           

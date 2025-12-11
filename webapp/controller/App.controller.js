@@ -1,14 +1,21 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/m/MessageToast"
+    "sap/m/MessageToast",
+    "sap/ui/model/json/JSONModel",
+    "sap/ui/model/resource/ResourceModel"
+    
 
-], (Controller, MessageToast ) =>{
-    "use strict"; 
+], (Controller, MessageToast, JSONModel, ResourceModel ) => {
+    "use strict";
 
     return Controller.extend("ui5_walkthroug.controller.App", {
         onClickMe() {
-            let text = "Button was clicked!";
-            MessageToast.show(text);         
-     }    
-   });
+            // read message from i18n model
+            const oBundle = this.getView().getModel("i18n").getResourceBundle()
+            const sTerm = this.getView().getModel().getProperty("/terms/name2");
+            const text = oBundle.getText("helloMsg", [sTerm]);
+
+            MessageToast.show(text);
+        }
+    });
 });

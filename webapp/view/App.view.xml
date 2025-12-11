@@ -4,8 +4,14 @@
     xmlns:mvc="sap.ui.core.mvc">
 
     <Button 
-        text="Click Me"
+        text="{i18n>showHelloButtontext}"
         type="Reject"
         press="onClickMe"
     ></Button>
+    <Input 
+        value="{/terms/name2}"
+        description="Hello {/terms/name2}!"
+        valueLiveUpdate="true"
+        width="60%"
+    ></Input>
 </mvc:View>
