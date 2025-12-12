@@ -2,26 +2,28 @@
     controllerName="ui5_walkthroug.controller.App"
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc">
+  
+  <Table items="{/personen}">
+    <columns>  
+        <Column>
+            <Text text="Vorname"/>
+        </Column>
+        <Column>
+            <Text text="Nachname"/>
+        </Column>
+        <Column>
+            <Text text="Geburtsdatum"/>
+        </Column>
+    </columns>
+    <items>
+        <ColumnListItem>
+            <cells>
+                <Text text="{Vorname}"/>
+                <Text text="{Nachname}"/>
+                <Text text="{Geburtsdatum}"/>
+            </cells>
+        </ColumnListItem>
+    </items>
+    </Table>
 
-    <Button 
-        text="{i18n>showHelloButtontext}"
-        type="Reject"
-        press="onClickMe"
-    ></Button>
-    <Input 
-        value="{/terms/name2}"
-        description="Hello {/terms/name2}!"
-        valueLiveUpdate="true"
-        width="60%"
-    ></Input>
-
-<FlexBox >  
-    <Text 
-        wrapping="true"
-        width="50%"
-    ></Text>
-
-    <Label  text="{i18n>person}"></Label>
-    <Input  value="{/personen/Vorname} {/personen/Nachname}"></Input>
-</FlexBox>
 </mvc:View>
