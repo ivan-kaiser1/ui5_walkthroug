@@ -3,7 +3,7 @@
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc">
   
-  <Table items="{/personen}">
+  <Table  items="{/personen}" >
     <columns>  
         <Column>
             <Text text="Vorname"/>
@@ -25,5 +25,12 @@
         </ColumnListItem>
     </items>
     </Table>
+
+    <FlexBox>
+        <Label text="Vorname"/>
+        <Input value="{/personen/0/Vorname}" id="idVorname"/>
+        <Label text="Nachname"/>
+        <Input value="{/personen/0/Nachname}" id="idNachname"/>
+  </FlexBox>
 
 </mvc:View>

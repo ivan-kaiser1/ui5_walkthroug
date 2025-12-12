@@ -3,12 +3,32 @@ sap.ui.define([
     "sap/m/MessageToast",
     "sap/ui/model/json/JSONModel",
     "sap/ui/model/resource/ResourceModel"
-    
+], 
+/**
+ * 
+ * @param {sap.ui.core.mvc.Controller} Controller 
+ * @param {*} MessageToast 
+ * @param {*} JSONModel 
+ * @param {*} ResourceModel 
+ * @returns 
+ */
 
-], (Controller, MessageToast, JSONModel, ResourceModel ) => {
+(Controller, MessageToast, JSONModel, ResourceModel ) => {
     "use strict";
 
     return Controller.extend("ui5_walkthroug.controller.App", {
+        
+        onInit : function () {
+            /** @type {sap.m.Input} */
+            let oVorname = this.byId("idVorname");
+            oVorname.setVisible(false);
+
+
+
+        },
+          
+        
+        
         onClickMe() {
             // read message from i18n model
             const oBundle = this.getView().getModel("i18n").getResourceBundle()

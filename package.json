@@ -9,5 +9,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "devDependencies": {
+    "@sap/eslint-plugin-ui5-jsdocs": "^2.0.8",
+    "@sapui5/ts-types": "^1.143.0",
+    "eslint": "^9.39.1"
+  }
 }
