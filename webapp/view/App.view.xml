@@ -14,4 +14,14 @@
         valueLiveUpdate="true"
         width="60%"
     ></Input>
+
+<FlexBox >  
+    <Text 
+        wrapping="true"
+        width="50%"
+    ></Text>
+
+    <Label  text="{i18n>person}"></Label>
+    <Input  value="{/personen/Vorname} {/personen/Nachname}"></Input>
+</FlexBox>
 </mvc:View>

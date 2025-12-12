@@ -1,10 +1,10 @@
 {
-    "_version": "1.1.0",
+    "_version": "1.65.0",
     "sap.app": {
         "_version": "1.1.0",
         "id": "ui5_walkthroug",
         "type": "application",
-        "i18n": "<i18n>/i18n.properties",
+        "i18n": "i18n/i18n.properties",
         "applicationVersion": {
             "version": "<1.0.0>"
         },
@@ -24,7 +24,7 @@
         }
     },
     "sap.ui": {
-        "_version": "1.1.0",
+       "technology": "UI5",
         "icons": {
             "icon": "<icon>",
             "favIcon": "<favIcon>",
@@ -59,19 +59,15 @@
             ]
         },
         "dependencies": {
-            "minUI5Version": "<minUI5Version>",
+            "minUI5Version": "1.108.0",
             "libs": {
-                "<ui5lib1>": {                   
-                    "minVersion": "<minVersion1>"
-                },
-                "<ui5lib2>": {                   
-                    "minVersion": "<minVersion2>"
-                }
-            },
-            "components": {
-                "<ui5component1>": {
-                    "minVersion": "<minComp1Version>"
-                }
+                "sap.ui.core": {},
+                "sap.m": {}
+            }
+        },
+        "components": {
+            "<ui5component1>": {
+                "minVersion": "<minComp1Version>"
             }
         },
         "models": {

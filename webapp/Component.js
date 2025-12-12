@@ -21,9 +21,9 @@ sap.ui.define([
 
 			// set data model on view
 			const oData = {
-                terms: {
-                    name: "World",
-                    name2: "UI5"
+                personen: {
+                    Vorname: "Werner",
+                    Nachname: "Baum"
                 }
             };
 			const oModel = new JSONModel(oData);
