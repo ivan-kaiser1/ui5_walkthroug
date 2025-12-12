@@ -1,36 +1,97 @@
 <mvc:View
     controllerName="ui5_walkthroug.controller.App"
     xmlns="sap.m"
-    xmlns:mvc="sap.ui.core.mvc">
-  
-  <Table  items="{/personen}" >
-    <columns>  
-        <Column>
-            <Text text="Vorname"/>
-        </Column>
-        <Column>
-            <Text text="Nachname"/>
-        </Column>
-        <Column>
-            <Text text="Geburtsdatum"/>
-        </Column>
-    </columns>
-    <items>
-        <ColumnListItem>
-            <cells>
-                <Text text="{Vorname}"/>
-                <Text text="{Nachname}"/>
-                <Text text="{Geburtsdatum}"/>
-            </cells>
-        </ColumnListItem>
-    </items>
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+>
+    <Table
+        items="{/personen}"
+        mode="SingleSelect"
+        selectionChange="onSelectionChange"
+    >
+        <columns>
+            <Column>
+                <Text text="Vorname" />
+            </Column>
+            <Column>
+                <Text text="Nachname" />
+            </Column>
+            <Column>
+                <Text text="Geburtsdatum" />
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem>
+                <cells>
+                    <Text text="{Vorname}" />
+                    <Text text="{Nachname}" />
+                    <Text text="{Geburtsdatum}" />
+                </cells>
+            </ColumnListItem>
+        </items>
     </Table>
 
     <FlexBox>
-        <Label text="Vorname"/>
-        <Input value="{/personen/0/Vorname}" id="idVorname"/>
-        <Label text="Nachname"/>
-        <Input value="{/personen/0/Nachname}" id="idNachname"/>
-  </FlexBox>
+        <Label text="Vorname" />
+        <Input
+            value="{/personen/0/Vorname}"
+            id="idVorname"
+        />
+        <Label text="Nachname" />
+        <Input
+            value="{/personen/0/Nachname}"
+            id="idNachname"
+        />
+    </FlexBox>
 
+    <f:Form id="adressForm">
+        <f:title>
+            <core:Title text="Address" />
+        </f:title>
+        <f:layout>
+            <f:ResponsiveGridLayout
+                labelSpanXL="3"
+                labelSpanL="3"
+                labelSpanM="3"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="4"
+                emptySpanL="4"
+                emptySpanM="4"
+                emptySpanS="0"
+                columnsXL="1"
+                columnsL="1"
+                columnsM="1"
+                singleContainerFullSize="false"
+            />
+        </f:layout>
+        <f:formContainers>
+            <f:FormContainer>
+                <f:formElements>
+                    <f:FormElement label="Strasse u. Hausnummer">
+                        <f:fields>
+                            <Input value="{Strasse}" />
+                            <Input value="{Hausnummer}">
+                                <layoutData>
+                                    <l:GridData span="XL1 L2 M2 S4" />
+                                </layoutData>
+                            </Input>
+                        </f:fields>
+                    </f:FormElement>
+                    <f:FormElement label="Postleitzahl u. Strasse Code/City">
+                        <f:fields>
+                            <Input value="{PLZ}">
+                                <layoutData>
+                                    <l:GridData span="XL1 L2 M2 S4" />
+                                </layoutData>
+                            </Input>
+                            <Input value="{Strasse}" />
+                        </f:fields>
+                    </f:FormElement>
+                </f:formElements>
+            </f:FormContainer>
+        </f:formContainers>
+    </f:Form>
 </mvc:View>
