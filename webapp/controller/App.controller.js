@@ -12,7 +12,7 @@ sap.ui.define([
         
         onInit : function () {
             let oVorname = this.byId("idVorname");
-            oVorname.setEditable(false);
+            oVorname.setEditable(false); 
 
         },
            
