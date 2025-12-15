@@ -8,7 +8,7 @@
 >
     <Table
         items="{/personen}"
-        mode="SingleSelect"
+        mode="SingleSelectLeft"
         selectionChange="onSelectionChange"
     >
         <columns>
