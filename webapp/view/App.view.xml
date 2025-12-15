@@ -7,7 +7,7 @@
     xmlns:core="sap.ui.core"
 >
     <Table
-        items="{/personen}"
+        items="{personen>/personen}"
         mode="SingleSelectLeft"
         selectionChange="onSelectionChange"
     >
@@ -25,9 +25,9 @@
         <items>
             <ColumnListItem>
                 <cells>
-                    <Text text="{Vorname}" />
-                    <Text text="{Nachname}" />
-                    <Text text="{Geburtsdatum}" />
+                    <Text text="{personen>Vorname}" />
+                    <Text text="{personen>Nachname}" />
+                    <Text text="{personen>Geburtsdatum}" />
                 </cells>
             </ColumnListItem>
         </items>
@@ -73,7 +73,7 @@
                     <f:FormElement label="Strasse u. Hausnummer">
                         <f:fields>
                             <Input value="{Strasse}" />
-                            <Input value="{Hausnummer}">
+                            <Input value="{Hausnummer}" >
                                 <layoutData>
                                     <l:GridData span="XL1 L2 M2 S4" />
                                 </layoutData>
@@ -87,7 +87,7 @@
                                     <l:GridData span="XL1 L2 M2 S4" />
                                 </layoutData>
                             </Input>
-                            <Input value="{Strasse}" />
+                            <Input value="{Straße}" />
                         </f:fields>
                     </f:FormElement>
                 </f:formElements>

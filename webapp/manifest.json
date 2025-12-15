@@ -51,9 +51,9 @@
                 }
 
             },
-            "personen": {
+            "personen": { 
                 "type": "sap.ui.model.json.JSONModel",
-                "dataSource": "personen"
+                "uri": "models/personen.json"          
             }
         },
         "rootView": {
