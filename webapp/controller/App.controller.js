@@ -11,7 +11,6 @@ sap.ui.define([
     return Controller.extend("ui5_walkthroug.controller.App", {
         
         onInit : function () {
-            /** @type {sap.m.Input} */
             let oVorname = this.byId("idVorname");
             oVorname.setEditable(false);
 
@@ -24,6 +23,16 @@ sap.ui.define([
             const text = oBundle.getText("helloMsg", [sTerm]);
 
             MessageToast.show(text);
-        }
+        },
+
+        onSelectionChange: function(oEvent) {
+            let oSelectedItem = oEvent.getParameter("listItem");
+            let oContext = oSelectedItem.getBindingContext();
+            let sPath = oContext.getPath();
+            let oForm = this.byId("adressForm");
+            oForm.bindElement(sPath + "/Adresse");
+        },
+
+
     });
 });

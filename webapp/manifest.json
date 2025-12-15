@@ -1,38 +1,18 @@
 {
     "_version": "1.65.0",
     "sap.app": {
-        "_version": "1.1.0",
+        "_version": "1.12.0",
         "id": "ui5_walkthroug",
         "type": "application",
         "i18n": "i18n/i18n.properties",
         "applicationVersion": {
-            "version": "<1.0.0>"
+            "version": "1.0.0"
         },
         "title": "{{appTitle}}",
-        "tags": {
-            "keywords": [
-                "{{<keyword1>}}", "{{<keyword2>}}"
-            ]
-        },
-        "dataSources": {
-            "<dataSourceAlias>": {
-                "uri": "<uri>",
-                "settings": {
-                    "localUri": "<localUri>"
-                }
-            }
-        }
+        "description": "{{appDescription}}"   
     },
     "sap.ui": {
-       "technology": "UI5",
-        "icons": {
-            "icon": "<icon>",
-            "favIcon": "<favIcon>",
-            "phone": "<phone>",
-            "phone@2": "<phone@2>",
-            "tablet": "<tablet>",
-            "tablet@2": "<tablet@2>"
-        },
+       "technology": "UI5",        
         "deviceTypes": {
             "desktop": true,
             "tablet": true,
@@ -45,19 +25,6 @@
     },
     "sap.ui5": {
         "_version": "1.1.0",
-        "resources": {
-            "js": [
-                {
-                    "uri": "<uri>"
-                }
-            ],
-            "css": [
-                {
-                    "uri": "<uri>",
-                    "id": "<id>"
-                }
-            ]
-        },
         "dependencies": {
             "minUI5Version": "1.108.0",
             "libs": {
@@ -73,38 +40,33 @@
         "models": {
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
-                "uri": "<uriRelativeToManifest>"
+                "settings": {
+                    "bundleName": "ui5_walkthroug.i18n.i18n"
+                }
+
             },
-            "": {
-                "dataSource": "<dataSourceAlias>",
-                "settings": {}
+            "personen": {
+                "type": "sap.ui.model.json.JSONModel",
+                "dataSource": "personen"
             }
         },
-        "rootView": "ui5_walkthroug.view.App",
+        "rootView": {
+            "viewName": "ui5_walkthroug.view.App",
+            "type": "XML",
+            "id": "app"
+        },
         "handleValidation": false,
         "config": {
-          
-        },
-        "routing": {
-          
-        },
-        "extends": {
-            "component" : "<extendedComponentId>",
-			"minVersion": "<minComp1Version>",
-			"extensions": {}
         },
         "contentDensities": {
             "compact": false,
             "cozy": false
         }
     },
-
-    "sap.platform.abap": {
-        "_version": "1.1.0",
-        "uri": "<uri>"
-    },
-    "sap.platform.hcp": {
-        "_version": "1.1.0",
-        "uri": "<uri>"
+    "dataSources": {
+        "personen": {
+            "uri": "models/personen.json",
+            "type": "JSON"
+        }
     }
 }

@@ -6,87 +6,15 @@ sap.ui.define([
     "use strict";
 
     return UIComponent.extend("ui5.walkthrough.Component", {
+       
         metadata: {
-            "interfaces": ["sap.ui.core.IAsyncContentCreation"],
-            "rootView": {
-                "viewName": "ui5_walkthroug.view.App",
-                "type": "XML",
-                "id": "app"
-            }
-        },
-
+            manifest: "json" },
+            
         init() {
             // call the init function of the parent
             UIComponent.prototype.init.apply(this, arguments);
 
-            // set data model on view
-            const oData = {
-                "personen": [
-                    {
-                        "Vorname": "Meike",
-                        "Nachname": "Müller",
-                        "Geburtsdatum": "12.12.1922",
-                        "Adresse": {
-                            "Strasse": "Putzbrunner Str",
-                            "Hausnummer": 14,
-                            "PLZ": 81737,
-                            "Stadt": "Neuperlach"
-                        }
-                    },
-                    {
-                        "Vorname": "Heike",
-                        "Nachname": "Huber",
-                        "Geburtsdatum": "15.01.1977",
-                        "Adresse": {
-                            "Strasse": "Huberstraße",
-                            "Hausnummer": 12,
-                            "PLZ": 70174,
-                            "Stadt": "Stuttgart"
-                        }
-                    },
-                    {
-                        "Vorname": "Rainer",
-                        "Nachname": "Herbst",
-                        "Geburtsdatum": "04.03.1980",
-                        "Adresse": {
-                            "Strasse": "Herbststraße",
-                            "Hausnummer": 25,
-                            "PLZ": 68219,
-                            "Stadt": "Mannheim"
-                        }
-                    },
-                    {
-                        "Vorname": "Fritz",
-                        "Nachname": "Sebastian",
-                        "Geburtsdatum": "03.05.2010",
-                        "Adresse": {
-                            "Strasse": "Sebastiangasse",
-                            "Hausnummer": 23,
-                            "PLZ": 24505,
-                            "Stadt": "Rostock"
-                        }
-                    },
-                    {
-                        "Vorname": "Patrick",
-                        "Nachname": "Scholz",
-                        "Geburtsdatum": "03.01.1950",
-                        "Adresse": {
-                            "Strasse": "Reventlouallee",
-                            "Hausnummer": 9,
-                            "PLZ": 24105,
-                            "Stadt": "Kiel"
-                        }
-                    }
-                ]
-            }
-            const oModel = new JSONModel(oData);
-            this.setModel(oModel,);
-
-            // set i18n model
-            const i18nModel = new ResourceModel({
-                bundleName: "ui5_walkthroug.i18n.i18n"
-            });
-            this.setModel(i18nModel, "i18n");
+            // ...existing code...
         }
     });
 });
