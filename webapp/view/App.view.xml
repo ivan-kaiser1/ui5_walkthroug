@@ -1,15 +1,51 @@
-<mvc:View
-    controllerName="ui5_walkthroug.controller.App"
+<mvc:View controllerName="ui5_walkthroug.controller.App"
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:l="sap.ui.layout"
     xmlns:f="sap.ui.layout.form"
-    xmlns:core="sap.ui.core">
-    <Table
-        items="{personen>/personen}"
-        mode="SingleSelectLeft"
-        selectionChange="onSelectionChange"
-    >
+    xmlns:core="sap.ui.core"
+    xmlns:uxap="sap.uxap">
+
+    <Shell id="shell">
+        <App id="appPo">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                <Button text="Open Dialog und zeig Fragment" press="onOpenDialog"/>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+
+</mvc:View>
+
+
+<!-- Add Fragment into the View ############################### -->
+                  <!-- <HBox fitContainer="true" justifyContent="Start" alignItems="Baseline" width="100%">
+                         <VBox>
+                            <Button text="Open Dialog und zeig Fragment" press="onOpenDialog"/>
+                          </VBox>
+                            <VBox class="sapUiContentPadding">
+                                <core:Fragment fragmentName="ui5_walkthroug.view.AppViewFragment" type="XML"/>
+                            </VBox>
+                        </HBox> -->
+<!-- Vertical Layout mit Suchhilfe ###########################
+   <l:VerticalLayout class="sapUiContentPadding">
+                            <Label id="labelID" text="Sag Hallo"/>
+
+                            <Input id="idInputField" width="10rem" placeholder="Gib deinen Namen ein" showSuggestion="true" suggest="onSuggest" suggestionItems="{/d/results}">
+                                <suggestionItems>
+                                    <core:Item text="{BusinessPartnerID}" />
+                                </suggestionItems>
+                            </Input>
+
+                            <Button text="Button" press="onPress"/>
+                        </l:VerticalLayout> -->
+
+<!-- Tabelle ############################# -->
+
+<!-- <Table items="{personen>/personen}" mode="SingleSelectLeft" selectionChange="onSelectionChange">
         <columns>
             <Column>
                 <Text text="Vorname" />
@@ -34,15 +70,9 @@
 
     <FlexBox>
         <Label text="Vorname" />
-        <Input
-            value="{/personen/0/Vorname}"
-            id="idVorname"
-        />
+        <Input value="{/personen/0/Vorname}" id="idVorname" />
         <Label text="Nachname" />
-        <Input
-            value="{/personen/0/Nachname}"
-            id="idNachname"
-        />
+        <Input value="{/personen/0/Nachname}" id="idNachname" />
     </FlexBox>
 
     <f:Form id="adressForm">
@@ -50,21 +80,7 @@
             <core:Title text="Address" />
         </f:title>
         <f:layout>
-            <f:ResponsiveGridLayout
-                labelSpanXL="3"
-                labelSpanL="3"
-                labelSpanM="3"
-                labelSpanS="12"
-                adjustLabelSpan="false"
-                emptySpanXL="4"
-                emptySpanL="4"
-                emptySpanM="4"
-                emptySpanS="0"
-                columnsXL="1"
-                columnsL="1"
-                columnsM="1"
-                singleContainerFullSize="false"
-            />
+            <f:ResponsiveGridLayout labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false" />
         </f:layout>
         <f:formContainers>
             <f:FormContainer>
@@ -72,7 +88,7 @@
                     <f:FormElement label="Strasse u. Hausnummer">
                         <f:fields>
                             <Input value="{Strasse}" />
-                            <Input value="{Hausnummer}" >
+                            <Input value="{Hausnummer}">
                                 <layoutData>
                                     <l:GridData span="XL1 L2 M2 S4" />
                                 </layoutData>
@@ -92,6 +108,4 @@
                 </f:formElements>
             </f:FormContainer>
         </f:formContainers>
-    </f:Form>
-
-</mvc:View>
+    </f:Form> -->

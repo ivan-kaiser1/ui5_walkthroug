@@ -1,0 +1,16 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog id="myDialog" title="Demo Dialog">
+        <!-- <beginButton>
+            <Button text="OK" press="onCloseDialog"/>
+        </beginButton> -->
+        <buttons>
+            <Button text="OK" press="onCloseDialog"/>
+            <Button text="Not Ok" press="onCloseDialogNotOk"/>
+        </buttons>
+        <Label text="Label in einem Fragment"/>
+        <Input id="inputInFragment" placeholder="Input im Fragment"/>
+        <Button text="Hallo SAPUI5"/>
+    </Dialog>
+</core:FragmentDefinition >
+
