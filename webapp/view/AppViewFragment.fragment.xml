@@ -8,6 +8,11 @@
             <Button text="OK" press="onCloseDialog"/>
             <Button text="Not Ok" press="onCloseDialogNotOk"/>
         </buttons>
+
+        <core:Icon 
+            src="sap-icon://world"
+            size="2rem"
+             class="sapUiSmallMargin" />
         <Label text="Label in einem Fragment" class="sapUiSmallMargin"/>
 
         <Input id="inputInFragment" placeholder="Input im Fragment" class="sapUiSmallMargin" width="15rem"/>

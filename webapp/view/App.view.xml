@@ -11,8 +11,8 @@
             <pages>
                 <Page id="page" title="{i18n>title}">
                     <content>
-                        <Button text="Open Dialog und zeig Fragment" press="onOpenDialog" />
-
+                        <Button icon="sap-icon://accessibility" text="Open Dialog und zeig Fragment" press="onOpenDialog" class="sapUiSmallMargin"/>
+       
 
                     </content>
 
@@ -22,6 +22,31 @@
     </Shell>
 
 </mvc:View>
+
+
+<!-- Panel ########################################### -->
+<!-- 
+                        <Panel headerText="{i18n>title}">
+                            <content>
+                                <HBox alignItems="Center" class="sapUiSmallMargin">
+                                    <Button text="Click Me!" />
+                                    <Input width="200px" class="sapUiSmallMarginBeginEnd" />
+                                    <Text text="Hello" />
+                                </HBox>
+                            </content>
+                        </Panel> -->
+
+
+
+<!-- List ############################################## -->
+<!-- <List id="personList" items="{personen>/personen}" class="sapUiSmallMargin">
+                            <items>
+                                <StandardListItem title="{personen>Vorname} {personen>Nachname}" description="{personen>Adresse/Hausnummer}"/>
+                            </items>
+                        
+                        </List> -->
+
+
 
 <!-- Form Layout mit 2 Containern #################################### -->
 <!-- <f:Form editable="true">
@@ -72,7 +97,7 @@
                             </VBox>
                         </HBox> -->
 
-                        
+
 <!-- Vertical Layout mit Suchhilfe ###########################
    <l:VerticalLayout class="sapUiContentPadding">
                             <Label id="labelID" text="Sag Hallo"/>
