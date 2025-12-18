@@ -11,8 +11,11 @@
             <pages>
                 <Page id="page" title="{i18n>title}">
                     <content>
-                <Button text="Open Dialog und zeig Fragment" press="onOpenDialog"/>
+                        <Button text="Open Dialog und zeig Fragment" press="onOpenDialog" />
+
+
                     </content>
+
                 </Page>
             </pages>
         </App>
@@ -20,9 +23,47 @@
 
 </mvc:View>
 
+<!-- Form Layout mit 2 Containern #################################### -->
+<!-- <f:Form editable="true">
+    <f:layout>
+        <f:ColumnLayout columnsL="2" />
+    </f:layout>
+    <f:FormContainer>
+        <f:FormElement label="Strasse">
+            <Input value="{Street}" editable="false" />
+            <Input value="{Building}" editable="false" />
+        </f:FormElement>
+        <f:FormElement label="PLZ">
+            <Input value="{PostalCode}" editable="false" />
+        </f:FormElement>
+        <f:FormElement label="Ort">
+            <Input value="{City}" editable="false" />
+        </f:FormElement>
+        <f:FormElement label="Land">
+            <Input value="{Country}" editable="false" />
+        </f:FormElement>
+    </f:FormContainer>
+
+    <f:FormContainer>
+        <f:FormElement label="Strasse">
+            <Input value="{Street}" editable="false" />
+            <Input value="{Building}" editable="false" />
+        </f:FormElement>
+        <f:FormElement label="PLZ">
+            <Input value="{PostalCode}" editable="false" />
+        </f:FormElement>
+        <f:FormElement label="Ort">
+            <Input value="{City}" editable="false" />
+        </f:FormElement>
+        <f:FormElement label="Land">
+            <Input value="{Country}" editable="false" />
+        </f:FormElement>
+    </f:FormContainer>
+</f:Form> -->
+
 
 <!-- Add Fragment into the View ############################### -->
-                  <!-- <HBox fitContainer="true" justifyContent="Start" alignItems="Baseline" width="100%">
+<!-- <HBox fitContainer="true" justifyContent="Start" alignItems="Baseline" width="100%">
                          <VBox>
                             <Button text="Open Dialog und zeig Fragment" press="onOpenDialog"/>
                           </VBox>
@@ -30,6 +71,8 @@
                                 <core:Fragment fragmentName="ui5_walkthroug.view.AppViewFragment" type="XML"/>
                             </VBox>
                         </HBox> -->
+
+                        
 <!-- Vertical Layout mit Suchhilfe ###########################
    <l:VerticalLayout class="sapUiContentPadding">
                             <Label id="labelID" text="Sag Hallo"/>
