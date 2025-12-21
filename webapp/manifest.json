@@ -15,6 +15,11 @@
                 "uri": "models/personen.json",
                 "type": "JSON"
             }
+        },
+        "sourceTemplate": {
+            "id": "@sap/ux-app-migrator:freestyle",
+            "version": "1.20.0",
+            "toolsId": "849812bd-fcbe-480b-85d9-34e381a7207b"
         }
     },
     "sap.ui": {
@@ -55,7 +60,6 @@
                 "type": "sap.ui.model.json.JSONModel",
                 "uri": "models/personen.json"
             },
-
             "": {
                 "type": "sap.ui.model.json.JSONModel",
                 "settings": {},
