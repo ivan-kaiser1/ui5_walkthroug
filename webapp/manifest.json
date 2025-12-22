@@ -68,11 +68,7 @@
                 "type": "sap.ui.model.json.JSONModel",
                 "uri": "models/personen.json"
             },
-<<<<<<< HEAD
             "invoices": {
-=======
-            "": {
->>>>>>> 71e7457574ec6963ae094b6b4520325d14fe43a6
                 "type": "sap.ui.model.json.JSONModel",
                 "uri": "models/invoices.json"
             }
