@@ -12,7 +12,14 @@
                 <Page id="page" title="{i18n>title}">
                     <content>
                         <Button icon="sap-icon://accessibility" text="Open Dialog und zeig Fragment" press="onOpenDialog" class="sapUiSmallMargin"/>
-       
+                        <List headerText="{i18n>invoiceListTitle}" 
+                              class="sapUiResponsiveMargin" 
+                              width="auto" 
+                              items="{invoices>/Invoices}">
+                            <items >
+                                <ObjectListItem title="{invoices>Quantity} x {invoices>ProductName}"/>
+                            </items>
+                        </List>
 
                     </content>
 

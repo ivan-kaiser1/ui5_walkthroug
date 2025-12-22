@@ -63,11 +63,9 @@
                 "type": "sap.ui.model.json.JSONModel",
                 "uri": "models/personen.json"
             },
-            "": {
+            "invoices": {
                 "type": "sap.ui.model.json.JSONModel",
-                "settings": {},
-                "uri": "./localService/BusinessPartnerSet.json",
-                "preload": true
+                "uri": "models/invoices.json"
             }
         },
         "rootView": {
