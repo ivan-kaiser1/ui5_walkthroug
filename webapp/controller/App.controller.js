@@ -4,10 +4,11 @@ sap.ui.define([
     "sap/m/MessageBox",
     "sap/ui/model/Filter",
     "sap/ui/model/FilterOperator",
-    "sap/ui/core/Fragment"
+    "sap/ui/core/Fragment",
+    "sap/ui/model/json/JSONModel"
 ],
 
-    (Controller, MessageToast, MessageBox, Filter, FilterOperator, Fragment) => {
+    (Controller, MessageToast, MessageBox, Filter, FilterOperator, Fragment, JSONModel) => {
         "use strict";
         /**
          * 
@@ -23,6 +24,12 @@ sap.ui.define([
             onInit: function () {
                 // let oVorname = this.byId("idVorname");
                 // oVorname.setEditable(false);
+
+                const oViewModel = new JSONModel({
+                        currency: "EUR"
+
+                });
+                this.getView().setModel(oViewModel, "view")
             },
 
             onSuggest: function (oEvent) {

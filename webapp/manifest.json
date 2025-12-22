@@ -14,6 +14,13 @@
             "personen": {
                 "uri": "models/personen.json",
                 "type": "JSON"
+            },
+            "GWSAMPLE_BASIC": {
+                "uri": "/sap/opu/odata/IWBEP/GWSAMPLE_BASIC",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
             }
         },
         "sourceTemplate": {
@@ -64,15 +71,21 @@
                     "bundleName": "ui5_walkthroug.i18n.i18n"
                 }
             },
+            "": {
+                "type": "sap.ui.model.odata.v2.ODataModel",
+                "settings": {
+                    "defaultOperationMode": "Server",
+                    "defaultBindingMode": "OneWay",
+                    "defaultCountMode": "Request"
+                },
+                "dataSource": "GWSAMPLE_BASIC",
+                "preload": true
+            },
             "personen": {
                 "type": "sap.ui.model.json.JSONModel",
                 "uri": "models/personen.json"
             },
-<<<<<<< HEAD
             "invoices": {
-=======
-            "": {
->>>>>>> 71e7457574ec6963ae094b6b4520325d14fe43a6
                 "type": "sap.ui.model.json.JSONModel",
                 "uri": "models/invoices.json"
             }
