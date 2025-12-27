@@ -27,9 +27,12 @@
                             </ObjectListItem>
                         </items>
                     </List>
-                    <VBox class=".quoteBox sapUiSmallMargin">
+                    <VBox class="sapUiResponsiveMargin" alignContent="Center" width="75%"
+                          backgroundDesign="Transparent">
+                    <VBox class="quoteBox " width="100%">
                         <Text text="{bible>/0/text}" wrapping="true" width="100%" class="verseText" />
                     </VBox>
+                     </VBox>
                 </Page>
             </pages>
         </App>
