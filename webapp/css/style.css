@@ -1,0 +1,13 @@
+.verseText {
+  font-size: 1.125rem;   /* gut lesbar */
+  line-height: 1.6;
+  font-weight: 500;
+  color: #e5e1e1;        /* dunkelgrau */
+}
+
+.quoteBox {
+  border: 1px solid #d1d5db;  /* Rahmen */
+  border-radius: 0.5rem;      /* abgerundet */
+  padding: 1rem;              /* Innenabstand */
+  background: #ffffff;        /* Hintergrund */
+}

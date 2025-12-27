@@ -25,6 +25,12 @@ sap.ui.define([
                 // let oVorname = this.byId("idVorname");
                 // oVorname.setEditable(false);
 
+                let oModel = new JSONModel();
+                let sUrl = "https://labs.bible.org/api/?passage=random&type=json";
+
+                  oModel.loadData(sUrl, null, true, "GET", false, false);
+                  this.getView().setModel(oModel, "bible");
+
                 const oViewModel = new JSONModel({
                         currency: "EUR"
 

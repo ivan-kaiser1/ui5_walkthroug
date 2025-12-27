@@ -1,38 +1,20 @@
-<mvc:View
-    controllerName="ui5_walkthroug.controller.App"
+<mvc:View controllerName="ui5_walkthroug.controller.App"
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:l="sap.ui.layout"
     xmlns:f="sap.ui.layout.form"
     xmlns:core="sap.ui.core"
-    xmlns:uxap="sap.uxap"
->
+    xmlns:uxap="sap.uxap">
     <Shell id="shell">
         <App id="appPo">
             <pages>
-                <Page
-                    id="page"
-                    title="{i18n>title}"
-                >
-                    <Button
-                        icon="sap-icon://accessibility"
-                        text="Open Dialog und zeig Fragment"
-                        press="onOpenDialog"
-                        class="sapUiSmallMargin"
-                    />
-                    <List
-                        headerText="Title goes hier"
-                        class="sapUiResponsiveMargin"
-                        items="{invoices>/Invoices}"
-                        width="40%"
-                    >
+                <Page id="page" title="{i18n>title}">
+                    <Button icon="sap-icon://accessibility" text="Open Dialog und zeig Fragment" press="onOpenDialog" class="sapUiSmallMargin" />
+                    <List headerText="Title goes hier" class="sapUiResponsiveMargin" items="{invoices>/Invoices}" width="40%">
                         <items>
-                            <ObjectListItem
-                                title="{invoices>Quantity} x {invoices>ProductName}"
-                                core:require="{
+                            <ObjectListItem title="{invoices>Quantity} x {invoices>ProductName}" core:require="{
                                      Currency: 'sap/ui/model/type/Currency'
-                                                }"
-                                number="{ 
+                                                }" number="{ 
                                                     parts:[
                                                       'invoices>ExtendedPrice', 
                                                       'view>/currency' 
@@ -41,23 +23,13 @@
                                                        formatOptions: {
                                                         showMeasure: true
                                                        }                   
-                                                     }"
-                                numberUnit="{view>currency}"
-                                numberState="{= ${invoices>ExtendedPrice} > 50 ? 'Error' : 'Success' }"
-                            >
-                                <firstStatus>
-                                    <ObjectStatus
-                                        core:require="{
-                                                         Formatter: 'ui5/walkthroug/model/formatter'
-                                                 }"
-                                        text="{
-                                                    path: 'invoice>Status',
-                                                    formatter: 'Formatter.statusText.bind($controller)'
-                        }" />
-                                </firstStatus>
+                                                     }" numberUnit="{view>currency}" numberState="{= ${invoices>ExtendedPrice} > 50 ? 'Error' : 'Success' }">
                             </ObjectListItem>
                         </items>
                     </List>
+                    <VBox class=".quoteBox sapUiSmallMargin">
+                        <Text text="{bible>/0/text}" wrapping="true" width="100%" class="verseText" />
+                    </VBox>
                 </Page>
             </pages>
         </App>

@@ -59,6 +59,12 @@
                 "sap.uxap": {}
             }
         },
+
+        "resources": {
+            "css": [
+                { "uri": "css/style.css"}
+            ]
+        },
         "components": {
             "<ui5component1>": {
                 "minVersion": "<minComp1Version>"
@@ -103,3 +109,4 @@
         }
     }
 }
+
