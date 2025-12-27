@@ -24,11 +24,12 @@
   "type": "commonjs",
   "devDependencies": {
     "@sap/eslint-plugin-ui5-jsdocs": "^2.0.8",
-    "@sapui5/ts-types": "^1.143.0",
-    "eslint": "^9.39.2",
-    "@ui5/cli": "^4.0.0",
     "@sap/ux-ui5-tooling": "1",
-    "rimraf": "6.0.1"
+    "@sapui5/ts-types": "^1.143.0",
+    "@ui5/cli": "^4.0.0",
+    "eslint": "^9.39.2",
+    "rimraf": "6.0.1",
+    "ui5-middleware-simpleproxy": "^3.6.0"
   },
   "private": true,
   "sapuxLayer": "CUSTOMER_BASE"
